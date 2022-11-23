@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Coordinators</h1>
+
+<table class="table table-bordered table-danger border-primary">
+<thead>
+  <tr>
+  <tr class="table-info">
+    <th scope="col">HI ʕ•͡-•ʔฅ</th>
+    <th scope="col">Name</th>
+    <th scope="col">phone</th>
+    <th scope="col">email</th>
+    <th scope="col">action</th>
+  </tr>
+</thead>
+<tbody>
+<% @coordinators.each do |coordinator|%>
+  <tr>
+  <th scope="row"><%=coordinator.id%></th>
+    <td><%=coordinator.name%></td>
+    <td><%=coordinator.email%></td>
+    <td><%=coordinator.phone%></td>
+    <td><%=link_to 'show', coordinator_path(coordinator.id) , class:"btn btn-info"%></td>
+  <%end%>
+</tbody>
+</table>
+
+<%= link_to "New coordinator 𓀞", new_coordinator_path %>

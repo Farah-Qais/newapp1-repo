@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p> 
+ 
+<h1>Participants</h1> 
+ 
+<table class="table table-bordered table-info border-primary"> 
+<thead> 
+  <tr> 
+  <tr class="table-dark"> 
+    <th scope="col">HI ʕ•͡-•ʔฅ</th> 
+    <th scope="col">registre_id</th> 
+    <th scope="col">Name</th> 
+    <th scope="col">gender</th> 
+    <th scope="col">dob</th> 
+    <th scope="col">action</th> 
+  </tr> 
+</thead> 
+<tbody> 
+<% @participants.each do |participant|%> 
+  <tr> 
+  <th scope="row"><%=participant.id%></th> 
+  <td><%=participant.registre_id%></td> 
+    <td><%=participant.name%></td> 
+    <td><%=participant.gender%></td> 
+    <td><%=participant.dob%></td> 
+
+    <td><%=link_to 'show', participant_path(participant.id) , class:"btn btn-info"%></td> 
+  <%end%> 
+</tbody> 
+</table> 
+ 
+<%= link_to "New participant", new_participant_path %>

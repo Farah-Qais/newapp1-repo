@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coordinator_id: MyString
+  participant_id: MyString
+  name: MyString
+  location: MyString
+
+two:
+  coordinator_id: MyString
+  participant_id: MyString
+  name: MyString
+  location: MyString
